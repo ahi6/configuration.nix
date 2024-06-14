@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+# cd to your config dir
+pushd /etc/nixos
+
+echo "Cleaning nix store"
+
+sudo nix-collect-garbage -d --delete-older-than 14d
+
+# Back to where you were
+popd
+
+# Notify all OK!
+notify-send -e "Nix store clean!" --icon=software-update-available

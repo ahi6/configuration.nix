@@ -1,0 +1,14 @@
+[user]
+	name = ahi6
+	email = 60984726+ahi6@users.noreply.github.com
+[github]
+	user = ahi6
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
+

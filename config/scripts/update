@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+# cd to your config dir
+pushd /etc/nixos
+
+echo "Updating flakes"
+
+sudo nix flake update
+
+# Commit all changes
+git commit -am "Update flakes"
+
+# Back to where you were
+popd
+
+# Notify all OK!
+notify-send -e "Flakes updated" --icon=software-update-available
