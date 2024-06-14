@@ -2,6 +2,8 @@
 I aim to keep my configuration simple and minimal. I use a mostly vanilla GNOME Desktop without anything particularly exciting. 
 These are intended to be used only for my main computer and aren't designed suit other people's needs out of the box, but feel free to copy and paste snippets to your own config or use it as a base.  
 
+![NixOS Screenshot](https://github.com/ahi6/configuration.nix/assets/60984726/cb00f185-54a7-4cc0-9b70-8cbe0b824e1e)
+
 ## Directory structure
 ```sh
 nixos
