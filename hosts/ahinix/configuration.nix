@@ -140,6 +140,8 @@
       youtube-music
       shortwave # gtk+ internet radio
       celluloid # gtk+ mpv frontend
+      mission-center # resource usage monitor
+      hieroglyphic # LaTeX symbol finder
     ];
   };
 
