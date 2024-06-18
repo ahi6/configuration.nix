@@ -61,8 +61,8 @@
       gnome-tour
     ])
     ++ (with pkgs.gnome; [
-      geary # email reader
-      gnome-contacts
+      # geary # email reader
+      # gnome-contacts
       yelp # help viewer
     ]);
 
