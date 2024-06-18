@@ -2,6 +2,8 @@
 I aim to keep my configuration simple and minimal. I use a mostly vanilla GNOME Desktop without anything particularly exciting. 
 These are intended to be used only for my main computer and aren't designed suit other people's needs out of the box, but feel free to copy and paste snippets to your own config or use it as a base.  
 
+If you are considering NixOS yourself, keep in mind that managing nix configs is largely a Sisyphean task which is not worth the effort for most users. That being said, *one must imagine Sysiphus happy...*
+
 ![NixOS Screenshot](https://github.com/ahi6/configuration.nix/assets/60984726/48701aab-0120-4c99-a0f4-7c0b18e62e57)
 
 
