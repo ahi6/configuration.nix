@@ -66,6 +66,10 @@
       yelp # help viewer
     ]);
 
+  # Enable GNOME/Google account integration
+  services.accounts-daemon.enable = true;
+  services.gnome.gnome-online-accounts.enable = true;
+
   # Enable GStreamer in Nautilus
   # https://github.com/NixOS/nixpkgs/issues/195936#issuecomment-1278954466
   environment.sessionVariables.GST_PLUGIN_SYSTEM_PATH_1_0 = lib.makeSearchPathOutput "lib" "lib/gstreamer-1.0" [
