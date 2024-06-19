@@ -77,8 +77,9 @@
     lazygit.enable = true;
 
     neovim.enable = true;
-    neovim.plugins = with pkgs; [
-      vimPlugins.nvim-treesitter.withAllGrammars
+    neovim.plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+      coc-rust-analyzer
     ];
   };
 
