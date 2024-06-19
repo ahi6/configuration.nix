@@ -81,6 +81,11 @@
       nvim-treesitter.withAllGrammars
       coc-rust-analyzer
     ];
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscodium.fhsWithPackages (ps: with ps; [rustup zlib]);
+    };
   };
 
   # programs.powerline-go.enable = true;
