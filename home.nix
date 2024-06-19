@@ -32,7 +32,8 @@
     # '')
   ];
 
-  # NOTE: Always make sure to commit to the local git repo (by updating flakes) before trying to rebuild. For some reason it usually fixes an issue with the rebuild.
+  # NOTE: nix ignores all files that are not in a git repo, if a git repo is present. make to to `git add` any new files
+  # source: https://nixos-and-flakes.thiscute.world/nixos-with-flakes/other-useful-tips#managing-the-configuration-with-git
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
