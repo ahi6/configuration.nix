@@ -11,7 +11,7 @@
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
     inputs.home-manager.nixosModules.default
-    ../../modules/davinci.nix
+    # ../../modules/davinci.nix
     ../../modules/warp.nix
   ];
 
@@ -116,7 +116,7 @@
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override {enableHybridCodec = true;};
   };
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
