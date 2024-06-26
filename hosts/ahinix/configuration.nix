@@ -146,6 +146,7 @@
       celluloid # gtk+ mpv frontend
       mission-center # resource usage monitor
       hieroglyphic # LaTeX symbol finder
+      foliate # e-book reader
     ];
   };
 
