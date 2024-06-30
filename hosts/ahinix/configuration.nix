@@ -13,6 +13,7 @@
     inputs.home-manager.nixosModules.default
     # ../../modules/davinci.nix
     ../../modules/warp.nix
+    ../../modules/no-middle-click-paste.nix
   ];
 
   # Bootloader.
