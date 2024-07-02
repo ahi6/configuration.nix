@@ -31,6 +31,6 @@
 
   users.users.ahi = {
     # adding to a group requires reboot
-    extraGroups = ["input"]; # /dev/input devices belong to this group, sometimes they don't, you can check with `ls -l /dev/input/`
+    extraGroups = ["input"]; # /dev/input devices belong to this group, sometimes they don't, you can check with `stat -c %G /dev/input/event0`
   };
 }
