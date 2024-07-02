@@ -60,11 +60,11 @@
   environment.gnome.excludePackages =
     (with pkgs; [
       gnome-tour
+      yelp # gnome help
+      geary # email reader
     ])
     ++ (with pkgs.gnome; [
-      # geary # email reader
-      # gnome-contacts
-      yelp # help viewer
+      gnome-contacts
     ]);
 
   # Enable GNOME/Google account integration
@@ -174,7 +174,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.night-theme-switcher
     gnomeExtensions.custom-hot-corners-extended
-    gnome.gnome-tweaks
+    gnome-tweaks
     tre-command
     zoxide
     libnotify
