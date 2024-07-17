@@ -41,4 +41,7 @@ nixos
             └── wallhaven-m9wyyy.png # https://wallhaven.cc/w/m9wyyy
 ```
 
+---
 
+
+[![Put everything in configuration.nix](https://github.com/user-attachments/assets/0f49f4d6-befe-4462-ac61-aef66e8ffd4d)(source)](https://www.tumblr.com/linux-real/755298701751304192)
