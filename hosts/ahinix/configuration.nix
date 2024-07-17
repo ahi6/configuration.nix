@@ -16,6 +16,10 @@
     ../../modules/no-middle-click-paste.nix
   ];
 
+  nixpkgs.overlays = [
+    (import ../../overlays/pkgs/gnome-backgrounds/default.nix) # custom wallpapers
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
