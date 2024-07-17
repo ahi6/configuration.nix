@@ -10,28 +10,35 @@ If you are considering NixOS yourself, keep in mind that managing nix configs is
 ## Directory structure
 ```sh
 nixos
-├── home.nix # home manager config, literally just moves dotfiles from /config to the correct folder
+├── README.md
 ├── config # dotfiles
-│   ├── fish
-│   │   └── config.fish
 │   ├── bash
 │   │   └── bashrc
-│   ├── scripts # scripts that make managing my OS with nix more convenient
-│   │   ├── clean   # nix-collect-garbage wrapper
-│   │   ├── rebuild # nixos-rebuild       wrapper
-│   │   └── update  # nix flake update    wrapper
-│   └── git
-│       └── gitconfig
-├── README.md
-├── flake.nix
+│   ├── fish
+│   │   └── config.fish
+│   ├── git
+│   │   └── gitconfig
+│   └── scripts  # scripts that make managing my OS with nix more convenient
+│       ├── clean   # nix-collect-garbage wrapper
+│       ├── rebuild # nixos-rebuild       wrapper
+│       └── update  # nix flake update    wrapper
 ├── flake.lock
+├── flake.nix
+├── home.nix # home manager config, literally just moves dotfiles from /config to the correct folder
+├── hosts
+│   └── ahinix
+│       ├── configuration.nix
+│       └── hardware-configuration.nix
 ├── modules # modules for programs that require more than just adding to systemPackages
-│   ├── warp.nix
-│   └── davinci.nix
-└── hosts  
-    └── ahinix
-        ├── configuration.nix # this is the main configuration file, where most installed programs are listed
-        └── hardware-configuration.nix
+│   ├── davinci.nix
+│   ├── no-middle-click-paste.nix
+│   └── warp.nix
+└── overlays
+    └── pkgs
+        └── gnome-backgrounds # adds a custom GNOME wallpaper with light and dark mode variations
+            ├── default.nix
+            ├── wallhaven-1kqv13.png # https://wallhaven.cc/w/1kqv13
+            └── wallhaven-m9wyyy.png # https://wallhaven.cc/w/m9wyyy
 ```
 
 
