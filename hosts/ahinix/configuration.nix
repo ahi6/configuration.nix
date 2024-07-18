@@ -178,6 +178,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.night-theme-switcher
     gnomeExtensions.custom-hot-corners-extended
+    gnomeExtensions.open-bar
     gnome-tweaks
     tre-command
     zoxide
