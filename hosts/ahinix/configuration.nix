@@ -168,24 +168,30 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    gnupg
-    pinentry
-    gnomeExtensions.appindicator
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.night-theme-switcher
-    gnomeExtensions.custom-hot-corners-extended
-    gnomeExtensions.open-bar
-    gnome-tweaks
-    tre-command
-    zoxide
-    libnotify
-    hunspellDicts.cs-cz
-    ffmpeg
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      wget
+      git
+      gnupg
+      pinentry
+      gnome-tweaks
+      tre-command
+      zoxide
+      libnotify
+      hunspellDicts.cs-cz
+      ffmpeg
+    ]
+    ++ (with gnomeExtensions; [
+      appindicator
+      dash-to-dock
+      night-theme-switcher
+      custom-hot-corners-extended
+      open-bar
+      focused-window-d-bus
+      window-title-is-back
+      xwayland-indicator
+    ]);
 
   # programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [
