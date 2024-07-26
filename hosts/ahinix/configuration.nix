@@ -200,6 +200,9 @@
   # ];
 
   programs.fish.enable = true;
+  programs.fish.promptInit = ''
+    ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+  '';
   programs.direnv.enable = true;
   programs.steam = {
     enable = true;
