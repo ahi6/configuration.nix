@@ -1,2 +1,2 @@
 zoxide init fish | source
-# any-nix-shell fish --info-right | source
+nix-your-shell fish | source

@@ -152,7 +152,7 @@
       mission-center # resource usage monitor
       hieroglyphic # LaTeX symbol finder
       foliate # e-book reader
-      any-nix-shell
+      nix-your-shell # nix-shell fish support
       fzf
     ];
   };
