@@ -61,15 +61,12 @@
   services.udev.packages = with pkgs; [gnome.gnome-settings-daemon];
 
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
-  environment.gnome.excludePackages =
-    (with pkgs; [
-      gnome-tour
-      yelp # gnome help
-      geary # email reader
-    ])
-    ++ (with pkgs.gnome; [
-      gnome-contacts
-    ]);
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    yelp # gnome help
+    geary # email reader
+    gnome-contacts
+  ];
 
   # Enable GNOME/Google account integration
   services.accounts-daemon.enable = true;
