@@ -189,7 +189,6 @@
       dash-to-dock
       night-theme-switcher
       custom-hot-corners-extended
-      open-bar
       focused-window-d-bus
       window-title-is-back
       xwayland-indicator
