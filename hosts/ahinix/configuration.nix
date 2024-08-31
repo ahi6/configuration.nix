@@ -193,6 +193,7 @@
       focused-window-d-bus
       window-title-is-back
       xwayland-indicator
+      mpris-label
     ]);
 
   # programs.nix-ld.enable = true;
