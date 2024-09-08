@@ -18,15 +18,13 @@ final: prev: let
     </wallpapers>
   '';
 in {
-  gnome = prev.gnome.overrideScope (gfinal: gprev: {
-    gnome-backgrounds = gprev.gnome-backgrounds.overrideAttrs (oldAttrs: {
-      postInstall =
-        (oldAttrs.postInstall or "")
-        + ''
-          cat <<EOF > $out/share/gnome-background-properties/${background-name}.xml
-          ${background-xml}
-          EOF
-        ''; # we do a little heredoc syntax
-    });
+  gnome-backgrounds = prev.gnome-backgrounds.overrideAttrs (oldAttrs: {
+    postInstall =
+      (oldAttrs.postInstall or "")
+      + ''
+        cat <<EOF > $out/share/gnome-background-properties/${background-name}.xml
+        ${background-xml}
+        EOF
+      ''; # we do a little heredoc syntax
   });
 }
