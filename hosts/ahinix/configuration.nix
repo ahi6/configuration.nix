@@ -193,6 +193,7 @@
       window-title-is-back
       xwayland-indicator
       mpris-label
+      tiling-shell
     ]);
 
   # programs.nix-ld.enable = true;
