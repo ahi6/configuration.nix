@@ -88,5 +88,9 @@
     };
   };
 
+  services = {
+    activitywatch.enable = true;
+  };
+
   # programs.powerline-go.enable = true;
 }
