@@ -90,6 +90,23 @@
 
   services = {
     activitywatch.enable = true;
+    watchers = {
+      aw-watcher-afk = {
+        package = pkgs.activitywatch;
+        settings = {
+          poll_time = 5;
+          timeout = 180;
+        };
+      };
+
+      aw-watcher-window = {
+        package = pkgs.activitywatch;
+        settings = {
+          exclude_title = false;
+          poll_time = 1;
+        };
+      };
+    };
   };
 
   # programs.powerline-go.enable = true;
