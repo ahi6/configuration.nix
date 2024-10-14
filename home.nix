@@ -107,6 +107,11 @@
             exclude_title = true;
           };
         };
+
+        awatcher = {
+          package = pkgs.awatcher;
+          executable = "awatcher";
+        };
       };
     };
     # activitywatch.watchers = {
