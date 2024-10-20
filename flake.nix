@@ -46,7 +46,7 @@
         # add your model from this list: https://github.com/NixOS/nixos-hardware/blob/master/flake.nix
         ./hosts/ahinix/configuration.nix
         inputs.home-manager.nixosModules.default
-        nixos-hardware.nixosModules.dell-latitude-5520
+        # nixos-hardware.nixosModules.dell-latitude-5520
       ];
     };
   };
