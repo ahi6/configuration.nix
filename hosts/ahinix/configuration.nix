@@ -154,6 +154,7 @@
       foliate # e-book reader
       nix-your-shell # nix-shell fish support
       fzf
+      prismlauncher
     ];
   };
 
