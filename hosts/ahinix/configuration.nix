@@ -14,7 +14,7 @@
     # ../../modules/davinci.nix
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
-    ../../modules/virtualbox.nix
+    # ../../modules/virtualbox.nix
   ];
 
   nixpkgs.overlays = [
