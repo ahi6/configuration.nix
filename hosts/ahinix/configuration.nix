@@ -11,7 +11,7 @@
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
     inputs.home-manager.nixosModules.default
-    # ../../modules/davinci.nix
+    ../../modules/davinci.nix
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
     # ../../modules/virtualbox.nix
@@ -61,7 +61,7 @@
   # https://nixos.wiki/wiki/GNOME#Systray_Icons
   services.udev.packages = with pkgs; [gnome-settings-daemon];
 
-  # i'm too lazy to package linux-show-player on my own 
+  # i'm too lazy to package linux-show-player on my own
   services.flatpak.enable = true;
 
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
@@ -159,6 +159,10 @@
       nix-your-shell # nix-shell fish support
       fzf
       prismlauncher
+      mpv
+      socat
+      kdenlive
+      audacity
     ];
   };
 
