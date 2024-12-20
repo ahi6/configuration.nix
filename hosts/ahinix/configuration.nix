@@ -61,7 +61,7 @@
   # https://nixos.wiki/wiki/GNOME#Systray_Icons
   services.udev.packages = with pkgs; [gnome-settings-daemon];
 
-  # i'm too lazy to package linux-show-player on my own 
+  # i'm too lazy to package linux-show-player on my own
   services.flatpak.enable = true;
 
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
