@@ -237,7 +237,7 @@
         http_port = 3000;
         enforce_domain = true;
         enable_gzip = true;
-        domain = "grafana.your.domain";
+        domain = "localhost";
 
         # Alternatively, if you want to server Grafana from a subpath:
         # domain = "your.domain";
