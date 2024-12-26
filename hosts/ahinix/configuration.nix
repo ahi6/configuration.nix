@@ -235,7 +235,7 @@
       server = {
         http_addr = "127.0.0.1";
         http_port = 3000;
-        enforce_domain = true;
+        enforce_domain = false;
         enable_gzip = true;
         domain = "localhost";
 
