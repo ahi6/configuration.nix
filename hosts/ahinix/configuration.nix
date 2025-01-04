@@ -228,28 +228,6 @@
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
 
-  # grafana testing environment
-  services.grafana = {
-    enable = true;
-    settings = {
-      server = {
-        http_addr = "127.0.0.1";
-        http_port = 3000;
-        enforce_domain = false;
-        enable_gzip = true;
-        domain = "localhost";
-
-        # Alternatively, if you want to server Grafana from a subpath:
-        # domain = "your.domain";
-        # root_url = "https://your.domain/grafana/";
-        # serve_from_sub_path = true;
-      };
-
-      # Prevents Grafana from phoning home
-      #analytics.reporting_enabled = false;
-    };
-  };
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
