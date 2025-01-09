@@ -226,13 +226,13 @@
   # List services that you want to enable:
 
   services.syncthing = {
-  enable = true;
-  openDefaultPorts = true;
-  settings.gui = {
-    user = "ahi";
-    password = "ahi";
+    enable = true;
+    openDefaultPorts = true;
+    settings.gui = {
+      user = "ahi";
+      password = "ahi";
+    };
   };
-};
 
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
