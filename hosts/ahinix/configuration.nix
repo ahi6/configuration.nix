@@ -98,8 +98,9 @@
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [hplipWithPlugin];
 
-  # Enable SANE to scan  documents.
+  # Enable SANE to scan documents.
   hardware.sane.enable = true;
+  hardware.sane.extraBackends = [pkgs.hplipWithPlugin];
 
   # Enable sound with pipewire.
   # sound.enable = true;
@@ -140,7 +141,7 @@
   users.users.ahi = {
     isNormalUser = true;
     description = "ahi";
-    extraGroups = ["networkmanager" "wheel" "lp"];
+    extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
     packages = with pkgs; [
       firefox
       microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
