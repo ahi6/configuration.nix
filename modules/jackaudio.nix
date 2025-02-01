@@ -16,5 +16,5 @@
       #'';
     };
   };
-  users.extraGroups.jackaudio.members = ["ahi6"];
+  users.extraGroups.jackaudio.members = ["ahi"];
 }
