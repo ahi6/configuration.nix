@@ -5,6 +5,7 @@
 }: {
   services.jack = {
     jackd.enable = true;
+    jackd.extraOptions = ["-dalsa" "--device" "hw:0,0"];
     # support ALSA only programs via ALSA JACK PCM plugin
     alsa.enable = false;
     # support ALSA only programs via loopback device (supports programs like Steam)
