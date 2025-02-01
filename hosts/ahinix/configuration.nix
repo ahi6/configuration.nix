@@ -14,6 +14,7 @@
     # ../../modules/davinci.nix
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
+    ../../modules/jackaudio.nix
     # ../../modules/virtualbox.nix
   ];
 
