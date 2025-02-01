@@ -10,7 +10,7 @@
     alsa.enable = false;
     # support ALSA only programs via loopback device (supports programs like Steam)
     loopback = {
-      enable = true;
+      enable = false;
       # buffering parameters for dmix device to work with ALSA only semi-professional sound programs
       #dmixConfig = ''
       #  period_size 2048
