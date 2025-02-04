@@ -226,7 +226,13 @@
   };
 
   # List services that you want to enable:
-  services.avahi.enable = true;
+  services.avahi = {
+    nssmdns4 = true;
+    nssmdns6 = true;
+    enable = true;
+    ipv4 = true;
+    ipv6 = true;
+  };
 
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
