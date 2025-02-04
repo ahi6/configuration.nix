@@ -1,14 +1,11 @@
-{
-  pkgs,
-  ...
-}: {
-boot = {
-
+{pkgs, ...}: {
+  boot = {
     plymouth = {
       enable = true;
-      theme = "blåhaj";
+      theme = "blahaj";
       themePackages = with pkgs; [
-        plymouth-blahaj-theme      ];
+        plymouth-blahaj-theme
+      ];
     };
 
     # Enable "Silent Boot"
@@ -24,10 +21,8 @@ boot = {
     #  "udev.log_priority=3"
     #];
 
-    # Not plymouth related, but let's set the 
+    # Not plymouth related, but let's set the
     # GRUB selection screen timeout to 1s
     loader.timeout = 1;
   };
-
 }
-
