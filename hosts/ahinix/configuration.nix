@@ -161,6 +161,7 @@
       nix-your-shell # nix-shell fish support
       fzf
       prismlauncher
+      smile # emoji picker
     ];
   };
 
