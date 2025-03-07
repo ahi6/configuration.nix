@@ -71,6 +71,7 @@
     yelp # gnome help
     geary # email reader
     gnome-contacts
+    totem # video player
   ];
 
   # Enable GNOME/Google account integration
