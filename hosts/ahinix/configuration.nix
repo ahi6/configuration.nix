@@ -163,6 +163,7 @@
       fzf
       prismlauncher
       smile # emoji picker
+      gnome-randr # display rotation cli
     ];
   };
 
