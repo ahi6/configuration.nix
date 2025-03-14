@@ -4,7 +4,8 @@ These are intended to be used only for my main computer and aren't designed suit
 
 If you are considering NixOS yourself, keep in mind that managing nix configs is largely a Sisyphean task which is not worth the effort for most users. That being said, *one must imagine Sysiphus happy...*
 
-![NixOS Screenshot](https://github.com/ahi6/configuration.nix/assets/60984726/48701aab-0120-4c99-a0f4-7c0b18e62e57)
+![NixOS Screenshot](https://github.com/user-attachments/assets/464d4c74-c531-4221-a424-084b35c82430)
+
 
 
 ## Directory structure
