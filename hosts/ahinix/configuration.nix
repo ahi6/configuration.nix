@@ -149,7 +149,6 @@
       microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
       vesktop
       obsidian
-      anki-bin
       megasync
       onlyoffice-bin_latest
       yt-dlp
