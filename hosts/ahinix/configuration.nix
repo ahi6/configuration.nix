@@ -145,8 +145,6 @@
     description = "ahi";
     extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
     packages = with pkgs; [
-      firefox
-      microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
       vesktop
       obsidian
       megasync
@@ -163,6 +161,24 @@
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
+    ];
+  };
+
+  # Guest account
+  users.users.haf = {
+    isNormalUser = true;
+    description = "haf";
+    extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
+    packages = with pkgs; [
+      vesktop
+      obsidian
+      onlyoffice-bin_latest
+      libreoffice-qt6-fresh
+      zulu
+      youtube-music
+      shortwave # gtk+ internet radio
+      celluloid # gtk+ mpv frontend
+      smile # emoji picker
     ];
   };
 
@@ -192,6 +208,8 @@
       libnotify
       hunspellDicts.cs-cz
       ffmpeg
+      firefox
+      microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
     ]
     ++ (with gnomeExtensions; [
       appindicator
