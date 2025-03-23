@@ -168,7 +168,7 @@
   users.users.haf = {
     isNormalUser = true;
     description = "haf";
-    extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
+    extraGroups = ["networkmanager" "scanner" "lp"];
     packages = with pkgs; [
       vesktop
       obsidian
