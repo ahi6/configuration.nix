@@ -139,6 +139,9 @@
     # NIXOS_OZONE_WL = "1"; # https://wiki.nixos.org/wiki/Wayland#Electron_and_Chromium
   };
 
+  # Enable xpadneo driver for Bluetooth Xbox One controller support
+  hardware.xpadneo.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ahi = {
     isNormalUser = true;
