@@ -224,6 +224,8 @@
       xwayland-indicator
       mpris-label
       tiling-shell
+      foresight
+      caffeine
     ]);
 
   # programs.nix-ld.enable = true;
