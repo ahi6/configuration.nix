@@ -161,6 +161,7 @@
       foliate # e-book reader
       nix-your-shell # nix-shell fish support
       fzf
+      just
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
