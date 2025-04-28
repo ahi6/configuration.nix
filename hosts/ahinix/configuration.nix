@@ -168,6 +168,10 @@
     ];
   };
 
+  fonts.packages = with pkgs; [
+    corefonts
+  ];
+
   # Guest account
   users.users.haf = {
     isNormalUser = true;
