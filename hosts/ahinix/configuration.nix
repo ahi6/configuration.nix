@@ -15,6 +15,7 @@
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
+    ../../modules/kde-connect.nix
     # ../../modules/virtualbox.nix
   ];
 
