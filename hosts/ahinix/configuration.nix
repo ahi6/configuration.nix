@@ -172,6 +172,8 @@
   fonts.packages = with pkgs; [
     corefonts
   ];
+  # Enable NixOS to use fonts from ~/.local/share/fonts
+  fonts.fontDir.enable = true;
 
   # Guest account
   users.users.haf = {
