@@ -63,7 +63,6 @@
   # https://nixos.wiki/wiki/GNOME#Systray_Icons
   services.udev.packages = with pkgs; [gnome-settings-daemon];
 
-  # i'm too lazy to package linux-show-player on my own
   services.flatpak.enable = true;
 
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
@@ -221,6 +220,7 @@
       ffmpeg
       firefox
       microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
+      flatpak-builder
     ]
     ++ (with gnomeExtensions; [
       appindicator
