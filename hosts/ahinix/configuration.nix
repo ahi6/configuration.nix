@@ -234,6 +234,7 @@
       tiling-shell
       foresight
       caffeine
+      light-style
     ]);
 
   # programs.nix-ld.enable = true;
