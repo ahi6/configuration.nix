@@ -40,6 +40,11 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
+  i18n.supportedLocales = [
+    "en_US.UTF-8/UTF-8"
+    "cs_CZ.UTF-8/UTF-8"
+  ];
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "cs_CZ.UTF-8";
     LC_IDENTIFICATION = "cs_CZ.UTF-8";
@@ -219,7 +224,9 @@
       hunspellDicts.cs-cz
       ffmpeg
       firefox
-      microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
+      # edge got killed (https://github.com/NixOS/nixpkgs/pull/407617)
+      # using flatpak version instead
+      # microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
       flatpak-builder
     ]
     ++ (with gnomeExtensions; [
