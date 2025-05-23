@@ -178,24 +178,6 @@
   # Enable NixOS to use fonts from ~/.local/share/fonts
   fonts.fontDir.enable = true;
 
-  # Guest account
-  users.users.haf = {
-    isNormalUser = true;
-    description = "haf";
-    extraGroups = ["networkmanager" "scanner" "lp"];
-    packages = with pkgs; [
-      vesktop
-      obsidian
-      onlyoffice-bin_latest
-      libreoffice-qt6-fresh
-      zulu
-      youtube-music
-      shortwave # gtk+ internet radio
-      celluloid # gtk+ mpv frontend
-      smile # emoji picker
-    ];
-  };
-
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = {inherit inputs;};
