@@ -155,7 +155,6 @@
     packages = with pkgs; [
       vesktop
       obsidian
-      megasync
       onlyoffice-bin_latest
       yt-dlp
       youtube-music
