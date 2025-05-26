@@ -11,7 +11,7 @@
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
     inputs.home-manager.nixosModules.default
-    # ../../modules/davinci.nix
+    ../../modules/davinci.nix
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
@@ -169,6 +169,8 @@
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
+      ffmpeg
+      kdePackages.kdenlive
     ];
   };
 
