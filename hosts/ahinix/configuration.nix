@@ -11,7 +11,6 @@
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
     inputs.home-manager.nixosModules.default
-    ../../modules/davinci.nix
     ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
@@ -165,6 +164,7 @@
       foliate # e-book reader
       nix-your-shell # nix-shell fish support
       fzf
+      bat
       just
       prismlauncher
       smile # emoji picker
