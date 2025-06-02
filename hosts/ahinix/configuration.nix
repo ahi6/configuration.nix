@@ -170,8 +170,6 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
-      kdePackages.kdenlive
-      handbrake
     ];
   };
 
