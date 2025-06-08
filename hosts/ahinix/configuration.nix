@@ -15,6 +15,7 @@
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
+    ../../modules/zed.nix
     # ../../modules/virtualbox.nix
   ];
 
@@ -170,8 +171,6 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
-      zed-editor-fhs
-      rust-analyzer
     ];
   };
 
