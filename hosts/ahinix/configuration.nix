@@ -170,6 +170,8 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
+      zed-editor-fhs
+      rust-analyzer
     ];
   };
 
