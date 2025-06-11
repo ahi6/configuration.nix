@@ -207,10 +207,6 @@
       hunspellDicts.cs-cz
       ffmpeg
       firefox
-      # edge got killed (https://github.com/NixOS/nixpkgs/pull/407617)
-      # using flatpak version instead
-      # microsoft-edge # Edge > Chrome; change my mind (they're both kinda bad though)
-      flatpak-builder
     ]
     ++ (with gnomeExtensions; [
       appindicator
@@ -226,6 +222,8 @@
       caffeine
       light-style
     ]);
+
+  security.sudo-rs.enable = true;
 
   # programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [
