@@ -13,6 +13,10 @@
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+    activate-linux.url = "github:ahi6/activate-linux";
+    # activate-linux.url = "github:MrGlockenspiel/activate-linux";
+    # activate-linux.url = "github:Kaisia-Estrel/activate-linux"; # rust version, incompatible with gnome
   };
 
   outputs = {
@@ -20,6 +24,7 @@
     nixpkgs,
     nixos-hardware,
     alejandra,
+    activate-linux,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -36,7 +41,10 @@
     nixosConfigurations.ahinix = nixpkgs.lib.nixosSystem {
       # ...
       system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
+      specialArgs = {
+        inherit inputs;
+        activate-linux-pkg = activate-linux.packages.${system}.default;
+      };
       modules = [
         {
           environment.systemPackages = [alejandra.defaultPackage.${system}];

@@ -16,6 +16,7 @@
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
     ../../modules/zed.nix
+    ../../modules/activate-linux.nix
     # ../../modules/virtualbox.nix
   ];
 
