@@ -35,6 +35,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.timeServers = ["time.fi.muni.cz"];
+
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
