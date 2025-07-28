@@ -1,6 +1,9 @@
 [user]
 	name = ahi6
 	email = 60984726+ahi6@users.noreply.github.com
+	signingkey = 82722832FED024BEFA1023C4B203ED59CAC063EE
+[commit]
+	gpgsign = true
 [github]
 	user = ahi6
 [init]
