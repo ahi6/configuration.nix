@@ -226,7 +226,7 @@
       light-style
     ]);
 
-  security.sudo-rs.enable = true;
+  # security.sudo-rs.enable = true;
 
   # programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [
