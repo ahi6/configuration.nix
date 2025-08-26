@@ -168,12 +168,14 @@
       foliate # e-book reader
       nix-your-shell # nix-shell fish support
       fzf
+      ripgrep
       bat
       just
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
+      mosh
     ];
   };
 
@@ -261,6 +263,8 @@
 
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
+
+  services.tailscale.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

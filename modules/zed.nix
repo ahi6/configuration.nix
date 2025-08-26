@@ -4,6 +4,6 @@
     rust-analyzer
     nixd
     nil
-    (callPackage ./discord-presence.nix {})
+    # (callPackage ./discord-presence.nix {})
   ];
 }

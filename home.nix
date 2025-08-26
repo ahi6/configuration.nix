@@ -40,6 +40,7 @@
     # # symlink to the Nix store copy.
     ".bashrc".source = config/bash/bashrc;
     ".gitconfig".source = config/git/gitconfig;
+    "./.ssh/config".source = config/ssh/config;
     "./.config/fish/config.fish".source = config/fish/config.fish;
     "./.bin/rebuild".source = config/scripts/rebuild;
     "./.bin/update".source = config/scripts/update;
