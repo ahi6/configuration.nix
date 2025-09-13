@@ -37,6 +37,20 @@
 
   networking.timeServers = ["time.fi.muni.cz"];
 
+  # tailscale
+  services.tailscale.enable = true;
+  # magicDNS
+  # https://github.com/tailscale/tailscale/issues/8563 🙂
+  networking.nameservers = [
+    "100.100.100.100"
+    "1.1.1.1"
+    "1.0.0.1"
+  ];
+  networking.search = ["blowfish-jazz.ts.net"];
+  networking.firewall.allowedUDPPorts = [53];
+  systemd.network.enable = true;
+  systemd.services.systemd-networkd-wait-online.enable = lib.mkForce false;
+
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
@@ -171,6 +185,7 @@
       ripgrep
       bat
       just
+      btop
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
@@ -263,8 +278,6 @@
 
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
-
-  services.tailscale.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
