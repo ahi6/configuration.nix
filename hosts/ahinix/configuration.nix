@@ -17,6 +17,7 @@
     ../../modules/kde-connect.nix
     ../../modules/zed.nix
     ../../modules/activate-linux.nix
+    ../../modules/muni.nix
     # ../../modules/virtualbox.nix
   ];
 
@@ -34,8 +35,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  networking.timeServers = ["time.fi.muni.cz"];
 
   # tailscale
   services.tailscale.enable = true;
@@ -190,7 +189,6 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
-      mosh
     ];
   };
 
