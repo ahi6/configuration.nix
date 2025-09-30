@@ -22,6 +22,7 @@
   ];
 
   nixpkgs.overlays = [
+    inputs.nur.overlays.default
     (import ../../overlays/pkgs/gnome-backgrounds/default.nix) # custom wallpapers
   ];
 
@@ -163,13 +164,16 @@
   # Enable xpadneo driver for Bluetooth Xbox One controller support
   hardware.xpadneo.enable = true;
 
+  # Tablet driver
+  hardware.opentabletdriver.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ahi = {
     isNormalUser = true;
     description = "ahi";
     extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
     packages = with pkgs; [
-      vesktop
+      equibop # vesktop fork
       obsidian
       onlyoffice-bin_latest
       yt-dlp
@@ -179,6 +183,7 @@
       mission-center # resource usage monitor
       hieroglyphic # LaTeX symbol finder
       foliate # e-book reader
+      geary # email reader
       nix-your-shell # nix-shell fish support
       fzf
       ripgrep
@@ -189,6 +194,9 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
+      # drawing
+      krita
+      rnote
     ];
   };
 
@@ -276,6 +284,16 @@
 
   # Disable fwupd, don't need it
   services.fwupd.enable = false;
+
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "ahi";
+    dataDir = "/home/ahi";
+    configDir = "/home/ahi/.config/syncthing";
+    # systemService = false;
+  };
+  # systemd.user.services.syncthing.wantedBy = ["default.target"];
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

@@ -17,6 +17,11 @@
     activate-linux.url = "github:ahi6/activate-linux";
     # activate-linux.url = "github:MrGlockenspiel/activate-linux";
     # activate-linux.url = "github:Kaisia-Estrel/activate-linux"; # rust version, incompatible with gnome
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -25,6 +30,7 @@
     nixos-hardware,
     alejandra,
     activate-linux,
+    nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -50,8 +56,7 @@
           environment.systemPackages = [alejandra.defaultPackage.${system}];
         }
 
-        # ...
-        # add your model from this list: https://github.com/NixOS/nixos-hardware/blob/master/flake.nix
+        {nixpkgs.overlays = [nur.overlays.default];}
         ./hosts/ahinix/configuration.nix
         inputs.home-manager.nixosModules.default
         # nixos-hardware.nixosModules.dell-latitude-5520 # fixed graphics-drivers on 24.11.20241018.4c2fcb0
