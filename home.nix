@@ -20,7 +20,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # pkgs.hello
+    pkgs.awatcher
 
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
@@ -96,47 +96,33 @@
   services = {
     activitywatch = {
       enable = true;
-      watchers = {
-        aw-watcher-afk = {
-          package = pkgs.activitywatch;
-          settings = {
-            timeout = 300;
-            poll_time = 2;
-          };
-        };
-
-        aw-watcher-windows = {
-          package = pkgs.activitywatch;
-          settings = {
-            poll_time = 1;
-            exclude_title = true;
-          };
-        };
-
-        awatcher = {
-          package = pkgs.awatcher;
-          executable = "awatcher";
-        };
-      };
+      #watchers = {
+      #  awatcher = {
+      #    package = pkgs.awatcher; # systemd's bad at managing awatcher
+      #    executable = "awatcher";
+      #  };
+      #};
     };
-    # activitywatch.watchers = {
-    #  aw-watcher-afk = {
-    #    package = pkgs.activitywatch;
-    #    settings = {
-    #      poll_time = 5;
-    #      timeout = 180;
-    #    };
-    #  };
-    #
-    #  aw-watcher-window = {
-    #    package = pkgs.activitywatch;
-    #    settings = {
-    #      exclude_title = false;
-    #      poll_time = 1;
-    #    };
-    #  };
-    #};
   };
+
+  xdg.autostart.enable = true;
+  xdg.autostart.entries = [
+    (
+      (pkgs.makeDesktopItem rec {
+        destination = "/";
+        name = "awatcher";
+        desktopName = name;
+        exec = "${name}";
+        terminal = false;
+        startupNotify = false;
+        extraConfig = {
+          "X-GNOME-Autostart-enabled" = "true";
+          "X-KDE-autostart-after" = "panel";
+        };
+      })
+      + /awatcher.desktop
+    )
+  ];
 
   # programs.powerline-go.enable = true;
 }

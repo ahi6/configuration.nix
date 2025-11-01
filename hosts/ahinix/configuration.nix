@@ -152,7 +152,7 @@
     extraPackages = with pkgs; [
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
       intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
     ];
   };
@@ -175,7 +175,7 @@
     packages = with pkgs; [
       equibop # vesktop fork
       obsidian
-      onlyoffice-bin_latest
+      onlyoffice-desktopeditors
       yt-dlp
       youtube-music
       shortwave # gtk+ internet radio
@@ -225,7 +225,7 @@
       wget
       git
       gnupg
-      pinentry
+      pinentry-gnome3
       gnome-tweaks
       tre-command
       zoxide
