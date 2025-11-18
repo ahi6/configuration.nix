@@ -80,15 +80,17 @@
     gh.enable = true;
     lazygit.enable = true;
 
-    neovim.enable = true;
-    neovim.plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
-      coc-nvim
-      coc-rust-analyzer
-      vim-nix
-    ];
-    neovim.coc.enable = true;
-    neovim.extraConfig = builtins.readFile ./config/init.vim;
+    neovim = {
+      enable = true;
+      plugins = with pkgs.vimPlugins; [
+        nvim-treesitter.withAllGrammars
+        coc-nvim
+        coc-rust-analyzer
+        vim-nix
+      ];
+      coc.enable = true;
+      extraConfig = builtins.readFile ./config/init.vim;
+    };
 
     vscode = {
       enable = true;
