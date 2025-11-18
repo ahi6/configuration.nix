@@ -10,7 +10,7 @@ pushd /etc/nixos
 # $EDITOR configuration.nix
 
 # Autoformat your nix files
-alejandra . &>/dev/null
+alejandra .
 
 # Shows your changes
 # it's not recursive :(
