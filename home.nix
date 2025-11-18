@@ -19,8 +19,11 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.awatcher
+  home.packages = with pkgs; [
+    awatcher
+
+    kitty
+    meowpdf
 
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
@@ -80,8 +83,12 @@
     neovim.enable = true;
     neovim.plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
+      coc-nvim
       coc-rust-analyzer
+      vim-nix
     ];
+    neovim.coc.enable = true;
+    neovim.extraConfig = builtins.readFile ./config/init.vim;
 
     vscode = {
       enable = true;
