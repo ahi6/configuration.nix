@@ -88,8 +88,9 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.windowManager.openbox.enable = true; # x11 fallback environment
 
-  # Enable the GNOME Desktop Environment.
+  # Enable the GNOME Desktop Environment. (wayland-only)
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
@@ -170,6 +171,7 @@
   };
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
+    GSK_RENDERER = "gl"; # force opengl renderer in GTK4 apps to fix graphical errors
     # NIXOS_OZONE_WL = "1"; # https://wiki.nixos.org/wiki/Wayland#Electron_and_Chromium
   };
 

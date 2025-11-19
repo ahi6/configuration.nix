@@ -24,6 +24,7 @@
 
     kitty
     meowpdf
+    mommy
 
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
@@ -87,6 +88,7 @@
         coc-nvim
         coc-rust-analyzer
         vim-nix
+        presence-nvim
       ];
       coc.enable = true;
       extraConfig = builtins.readFile ./config/init.vim;
