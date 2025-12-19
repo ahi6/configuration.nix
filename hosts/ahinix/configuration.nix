@@ -88,7 +88,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.windowManager.openbox.enable = true; # x11 fallback environment
+  services.xserver.windowManager.fluxbox.enable = true; # x11 fallback environment
 
   # Enable the GNOME Desktop Environment. (wayland-only)
   services.displayManager.gdm.enable = true;
