@@ -107,6 +107,8 @@
     geary # email reader
     gnome-contacts
     totem # video player
+    showtime # video player
+    decibels # audio player
   ];
 
   # Enable GNOME/Google account integration
