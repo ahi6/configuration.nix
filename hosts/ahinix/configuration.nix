@@ -16,7 +16,7 @@
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
     ../../modules/zed.nix
-    ../../modules/activate-linux.nix
+    # ../../modules/activate-linux.nix
     ../../modules/muni.nix
     # ../../modules/virtualbox.nix
   ];
@@ -109,6 +109,9 @@
     totem # video player
     showtime # video player
     decibels # audio player
+    rhythmbox # audio player
+    gnome-maps
+    epiphany # web browser
   ];
 
   # Enable GNOME/Google account integration
@@ -199,7 +202,6 @@
       mission-center # resource usage monitor
       hieroglyphic # LaTeX symbol finder
       foliate # e-book reader
-      geary # email reader
       nix-your-shell # nix-shell fish support
       fzf
       ripgrep
@@ -209,6 +211,7 @@
       prismlauncher
       smile # emoji picker
       gnome-randr # display rotation cli
+      file-roller
       ffmpeg
       # drawing
       krita
