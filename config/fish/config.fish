@@ -1,6 +1,7 @@
 zoxide init fish | source
 nix-your-shell fish | source
 export PATH="/home/ahi/.local/bin:$PATH"
+export EDITOR="nvim"
 
 function fish_right_prompt
   set -l prevstatus $status
