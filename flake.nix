@@ -11,7 +11,7 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
+    alejandra.url = "github:kamadorueda/alejandra/main";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
     activate-linux.url = "github:ahi6/activate-linux";

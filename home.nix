@@ -20,20 +20,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    awatcher
+    #    awatcher
 
     kitty
     meowpdf
     mommy
-
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
   # NOTE: nix ignores all files that are not in a git repo, if a git repo is present. make to to `git add` any new files
@@ -105,35 +96,35 @@
   };
 
   services = {
-    activitywatch = {
-      enable = true;
-      #watchers = {
-      #  awatcher = {
-      #    package = pkgs.awatcher; # systemd's bad at managing awatcher
-      #    executable = "awatcher";
-      #  };
-      #};
-    };
+    #    activitywatch = {
+    #      enable = true;
+    #watchers = {
+    #  awatcher = {
+    #    package = pkgs.awatcher; # systemd's bad at managing awatcher
+    #    executable = "awatcher";
+    #  };
+    #};
+    #    };
   };
 
-  xdg.autostart.enable = true;
-  xdg.autostart.entries = [
-    (
-      (pkgs.makeDesktopItem rec {
-        destination = "/";
-        name = "awatcher";
-        desktopName = name;
-        exec = "${name}";
-        terminal = false;
-        startupNotify = false;
-        extraConfig = {
-          "X-GNOME-Autostart-enabled" = "true";
-          "X-KDE-autostart-after" = "panel";
-        };
-      })
-      + /awatcher.desktop
-    )
-  ];
+  #  xdg.autostart.enable = true;
+  #  xdg.autostart.entries = [
+  #    (
+  #      (pkgs.makeDesktopItem rec {
+  #        destination = "/";
+  #        name = "awatcher";
+  #        desktopName = name;
+  #        exec = "${name}";
+  #        terminal = false;
+  #        startupNotify = false;
+  #        extraConfig = {
+  #          "X-GNOME-Autostart-enabled" = "true";
+  #          "X-KDE-autostart-after" = "panel";
+  #        };
+  #      })
+  #      + /awatcher.desktop
+  #    )
+  #  ];
 
   # programs.powerline-go.enable = true;
 }

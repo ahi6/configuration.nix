@@ -109,7 +109,7 @@
     totem # video player
     showtime # video player
     decibels # audio player
-    rhythmbox # audio player
+    gnome-music # audio player
     gnome-maps
     epiphany # web browser
   ];
