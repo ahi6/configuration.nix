@@ -196,7 +196,7 @@
       obsidian
       onlyoffice-desktopeditors
       yt-dlp
-      youtube-music
+      pear-desktop # youtube music
       shortwave # gtk+ internet radio
       celluloid # gtk+ mpv frontend
       mission-center # resource usage monitor
