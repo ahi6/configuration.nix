@@ -15,10 +15,10 @@
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
-    ../../modules/zed.nix
+    # ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
-    # ../../modules/virtualbox.nix
+    ../../modules/virtualbox.nix
   ];
 
   nixpkgs.overlays = [
@@ -282,6 +282,11 @@
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     # dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "kitty";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
