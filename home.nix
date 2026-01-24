@@ -34,9 +34,13 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     ".bashrc".source = config/bash/bashrc;
-    ".gitconfig".source = config/git/gitconfig;
-    "./.ssh/config".source = config/ssh/config;
     "./.config/fish/config.fish".source = config/fish/config.fish;
+    ".gitconfig".source = config/git/gitconfig;
+
+    #    # https://stackoverflow.com/questions/76955208/nixos-home-manager-ssh-config-permissions/77496055#77496055
+    #    "./.ssh/config_source".source = config/ssh/config_source;
+    #    "./.ssh/config_source".onChange = ''cat ~/.ssh/config_source > ~/.ssh/config && chmod 600 ~/.ssh/config'';
+
     "./.bin/rebuild".source = config/scripts/rebuild;
     "./.bin/update".source = config/scripts/update;
     "./.bin/clean".source = config/scripts/clean;

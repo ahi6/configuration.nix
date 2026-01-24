@@ -20,10 +20,19 @@
       thonny
       hyperfine # code benchmarking
     ];
+    #    pb111 = [   # tinycc is AISA exclusive, so i cannot work locally
+    #      python313 # tinyvm
+    #    ];
+    ib002 = [
+      python313
+      mypy
+      python313Packages.flake8
+    ];
   };
 in {
   # NTP
   networking.timeServers = ["time.fi.muni.cz"];
 
-  environment.systemPackages = munipkgs.pb015 ++ munipkgs.ib111;
+  # environment.systemPackages = munipkgs.pb015 ++ munipkgs.ib111; # fall 2025
+  environment.systemPackages = munipkgs.ib002; # spring 2026
 }

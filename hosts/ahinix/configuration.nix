@@ -15,10 +15,10 @@
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
-    # ../../modules/zed.nix
+    ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
-    ../../modules/virtualbox.nix
+    # ../../modules/virtualbox.nix
   ];
 
   nixpkgs.overlays = [
@@ -214,13 +214,14 @@
       file-roller
       ffmpeg
       # drawing
-      krita
+      # krita
       rnote
     ];
   };
 
   fonts.packages = with pkgs; [
     corefonts
+    monocraft
   ];
   # Enable NixOS to use fonts from ~/.local/share/fonts
   fonts.fontDir.enable = true;
@@ -240,7 +241,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs;
     [
-      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      vim
       wget
       git
       gnupg

@@ -21,8 +21,8 @@
     #  "udev.log_priority=3"
     #];
 
-    # Not plymouth related, but let's set the
-    # GRUB selection screen timeout to 1s
-    loader.timeout = 1;
+    ## Not plymouth related, but let's set the
+    ## GRUB selection screen timeout to 1s
+    #loader.timeout = 1;
   };
 }
