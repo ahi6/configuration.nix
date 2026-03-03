@@ -112,6 +112,7 @@
     gnome-music # audio player
     gnome-maps
     epiphany # web browser
+    gnome-software
   ];
 
   # Enable GNOME/Google account integration
@@ -247,6 +248,7 @@
       gnupg
       pinentry-gnome3
       gnome-tweaks
+      bazaar # flatpak manager
       tre-command
       zoxide
       libnotify
