@@ -83,20 +83,19 @@
         coc-nvim
         coc-rust-analyzer
         vim-nix
-        presence-nvim
       ];
       coc.enable = true;
       extraConfig = builtins.readFile ./config/init.vim;
     };
 
-    vscode = {
-      enable = true;
-      package = pkgs.vscodium.fhsWithPackages (ps:
-        with ps; [
-          # rustup
-          zlib
-        ]);
-    };
+    #    vscode = {
+    #      enable = true;
+    #      package = pkgs.vscodium.fhsWithPackages (ps:
+    #        with ps; [
+    #          # rustup
+    #          zlib
+    #        ]);
+    #    };
   };
 
   services = {

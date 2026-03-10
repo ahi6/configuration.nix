@@ -25,6 +25,6 @@ in {
         cat <<EOF > $out/share/gnome-background-properties/${background-name}.xml
         ${background-xml}
         EOF
-      ''; # we do a little heredoc syntax
+      '';
   });
 }

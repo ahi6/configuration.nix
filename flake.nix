@@ -62,5 +62,23 @@
         # nixos-hardware.nixosModules.dell-latitude-5520 # fixed graphics-drivers on 24.11.20241018.4c2fcb0
       ];
     };
+    nixosConfigurations.tvo = nixpkgs.lib.nixosSystem {
+      # ...
+      system = "x86_64-linux";
+      specialArgs = {
+        inherit inputs;
+        activate-linux-pkg = activate-linux.packages.${system}.default;
+      };
+      modules = [
+        {
+          environment.systemPackages = [alejandra.defaultPackage.${system}];
+        }
+
+        {nixpkgs.overlays = [nur.overlays.default];}
+        ./hosts/tvo/configuration.nix
+        inputs.home-manager.nixosModules.default
+        # nixos-hardware.nixosModules.dell-latitude-5520 # fixed graphics-drivers on 24.11.20241018.4c2fcb0
+      ];
+    };
   };
 }
