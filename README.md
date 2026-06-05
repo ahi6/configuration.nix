@@ -6,19 +6,16 @@ If you are considering NixOS yourself, keep in mind that managing nix configs is
 
 ![NixOS Screenshot](https://github.com/user-attachments/assets/464d4c74-c531-4221-a424-084b35c82430)
 
-
+## Host
+- `ahinix`: Old laptop
+- `tvo`: Legion Go S
 
 ## Directory structure
 ```sh
 nixos
 ├── README.md
 ├── config # dotfiles
-│   ├── bash
-│   │   └── bashrc
-│   ├── fish
-│   │   └── config.fish
-│   ├── git
-│   │   └── gitconfig
+│   ├── ... 
 │   └── scripts  # scripts that make managing my OS with nix more convenient
 │       ├── clean   # nix-collect-garbage wrapper
 │       ├── rebuild # nixos-rebuild       wrapper
@@ -27,13 +24,24 @@ nixos
 ├── flake.nix
 ├── home.nix # home manager config, literally just moves dotfiles from /config to the correct folder
 ├── hosts
-│   └── ahinix
+│   ├── ahinix # old laptop
+│   │   ├── configuration.nix
+│   │   └── hardware-configuration.nix
+│   ├── common
+│   │   └── configuration.nix
+│   └── tvo # Lenovo Legion Go S
 │       ├── configuration.nix
 │       └── hardware-configuration.nix
 ├── modules # modules for programs that require more than just adding to systemPackages
+│   ├── activate-linux.nix
 │   ├── davinci.nix
+│   ├── kde-connect.nix
+│   ├── muni.nix # FI MUNI university-related packages
 │   ├── no-middle-click-paste.nix
-│   └── warp.nix
+│   ├── plymouth.nix
+│   ├── virtualbox.nix
+│   ├── warp.nix
+│   └── zed.nix
 └── overlays
     └── pkgs
         └── gnome-backgrounds # adds a custom GNOME wallpaper with light and dark mode variations
