@@ -86,6 +86,8 @@
       ];
       coc.enable = true;
       extraConfig = builtins.readFile ./config/init.vim;
+      withRuby = true;
+      withPython = true;
     };
 
     #    vscode = {
