@@ -19,7 +19,7 @@ alejandra .
 echo "NixOS Rebuilding..."
 
 # Rebuild
-sudo nixos-rebuild switch --flake /etc/nixos#ahinix 
+sudo nixos-rebuild switch --flake /etc/nixos#`hostname`
 
 
 # Get current generation metadata
