@@ -34,5 +34,5 @@ in {
   networking.timeServers = ["time.fi.muni.cz"];
 
   # environment.systemPackages = munipkgs.pb015 ++ munipkgs.ib111; # fall 2025
-  environment.systemPackages = munipkgs.ib002; # spring 2026
+  # environment.systemPackages = munipkgs.ib002; # spring 2026
 }
