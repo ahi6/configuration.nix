@@ -223,15 +223,15 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
   fonts.fontconfig = {
-      defaultFonts = {
-        serif = [ "Noto Serif" "Noto Serif CJK SC" "Noto Serif CJK JP" "Noto Serif CJK KR" ];
-        sansSerif = [ "Noto Sans" "Noto Sans CJK SC" "Noto Sans CJK JP" "Noto Sans CJK KR" ];
-        monospace = [ "JetBrains Mono" "Noto Sans Mono CJK SC" "Noto Sans Mono CJK JP" ];
-      };
+    defaultFonts = {
+      serif = ["Noto Serif" "Noto Serif CJK SC" "Noto Serif CJK JP" "Noto Serif CJK KR"];
+      sansSerif = ["Noto Sans" "Noto Sans CJK SC" "Noto Sans CJK JP" "Noto Sans CJK KR"];
+      monospace = ["JetBrains Mono" "Noto Sans Mono CJK SC" "Noto Sans Mono CJK JP"];
     };
+  };
   # Enable NixOS to use fonts from ~/.local/share/fonts
   fonts.fontDir.enable = true;
 

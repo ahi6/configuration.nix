@@ -36,6 +36,7 @@
     ".bashrc".source = config/bash/bashrc;
     "./.config/fish/config.fish".source = config/fish/config.fish;
     ".gitconfig".source = config/git/gitconfig;
+    ".config/kitty/kitty.conf".source = config/kitty/kitty.conf;
 
     #    # https://stackoverflow.com/questions/76955208/nixos-home-manager-ssh-config-permissions/77496055#77496055
     #    "./.ssh/config_source".source = config/ssh/config_source;
@@ -87,7 +88,7 @@
       coc.enable = true;
       extraConfig = builtins.readFile ./config/init.vim;
       withRuby = true;
-      withPython = true;
+      withPython3 = true;
     };
 
     #    vscode = {
