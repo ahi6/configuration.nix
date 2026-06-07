@@ -91,6 +91,19 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  xdg.portal = {
+  enable = true;
+  xdgOpenUsePortal = true;
+  extraPortals = [ 
+    pkgs.xdg-desktop-portal-gnome 
+  ];
+  config = {
+    common = {
+      default = [ "gnome" ];
+    };
+  };
+};
+
   # Systray icons udev rules
   # https://nixos.wiki/wiki/GNOME#Systray_Icons
   services.udev.packages = with pkgs; [gnome-settings-daemon];
