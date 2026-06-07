@@ -17,7 +17,7 @@
     ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
-    # ../../modules/virtualbox.nix
+    ../../modules/virtualbox.nix
   ];
 
   nixpkgs.overlays = [
@@ -157,25 +157,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
-
-  # Video acceleration
-  nixpkgs.config.packageOverrides = pkgs: {
-    intel-vaapi-driver = pkgs.intel-vaapi-driver.override {enableHybridCodec = true;};
-  };
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-      libva-vdpau-driver
-      libvdpau-va-gl
-    ];
-  };
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
-    GSK_RENDERER = "gl"; # force opengl renderer in GTK4 apps to fix graphical errors
-    # NIXOS_OZONE_WL = "1"; # https://wiki.nixos.org/wiki/Wayland#Electron_and_Chromium
   };
 
   # Enable xpadneo driver for Bluetooth Xbox One controller support
