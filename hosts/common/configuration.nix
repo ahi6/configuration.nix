@@ -257,6 +257,7 @@
       hunspellDicts.cs-cz
       ffmpeg
       firefox
+      gamescope
     ]
     ++ (with gnomeExtensions; [
       appindicator
