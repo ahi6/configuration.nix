@@ -10,7 +10,7 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
-    ../../modules/warp.nix
+    # ../../modules/warp.nix
     ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
@@ -28,6 +28,8 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
