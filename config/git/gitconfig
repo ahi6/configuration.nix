@@ -3,7 +3,7 @@
 	email = 60984726+ahi6@users.noreply.github.com
 	signingkey = D76C611D8A9B5FAC
 [commit]
-	gpgsign = true
+	gpgsign = false  
 [github]
 	user = ahi6
 [init]
