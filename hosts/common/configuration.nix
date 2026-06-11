@@ -180,11 +180,14 @@
   # Tablet driver
   hardware.opentabletdriver.enable = true;
 
+  # i2c (for ddcutil)
+  hardware.i2c.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ahi = {
     isNormalUser = true;
     description = "ahi";
-    extraGroups = ["networkmanager" "scanner" "wheel" "lp"];
+    extraGroups = ["networkmanager" "scanner" "wheel" "lp" "i2c"];
     packages = with pkgs; [
       equibop # vesktop fork
       obsidian
@@ -209,6 +212,7 @@
       smile # emoji picker
       gnome-randr # display rotation cli
       ffmpeg
+      ddcutil
     ];
   };
 
