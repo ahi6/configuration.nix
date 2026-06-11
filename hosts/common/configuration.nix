@@ -213,6 +213,7 @@
       gnome-randr # display rotation cli
       ffmpeg
       ddcutil
+      ddcui
     ];
   };
 
