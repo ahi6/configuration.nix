@@ -93,6 +93,9 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  # kde
+  services.desktopManager.plasma6.enable = true;
+
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
