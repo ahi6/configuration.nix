@@ -38,10 +38,12 @@
       "https://cache.nixos.org/"
       "https://cache.garnix.io"
       "https://nix-community.cachix.org"
+      "https://noctalia.cachix.org"
     ];
     trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
     ];
   };
 
@@ -92,6 +94,7 @@
   # Enable the GNOME Desktop Environment. (wayland-only)
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
+  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 
   # kde
   services.desktopManager.plasma6.enable = true;
@@ -101,10 +104,11 @@
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gnome
+      pkgs.kdePackages.xdg-desktop-portal-kde
     ];
     config = {
       common = {
-        default = ["gnome"];
+        default = ["kde"];
       };
     };
   };

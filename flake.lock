@@ -126,11 +126,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781365335,
-        "narHash": "sha256-zqDBhXMzfbdlO7F2bGHe7MOtB3xngd/+4ieMHDC+ZXo=",
+        "lastModified": 1781497404,
+        "narHash": "sha256-9GAF8sSsnkyCVCWkomXR0T+zdSxyUlfPt6neQidimdg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5b6f5733726a1b2ccafb5dec6ac4ca7299fad66c",
+        "rev": "1285cd3d6882a9847f2d56ed5541b3350c8a6162",
         "type": "github"
       },
       "original": {
@@ -203,6 +203,37 @@
         "type": "github"
       }
     },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1781074563,
+        "narHash": "sha256-d34lhgOet4IqYMnCxbIvwFBMOyTV6PT4TyNEOP0/ZhU=",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1014179.9ae611a455b9/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+      }
+    },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1781516995,
+        "narHash": "sha256-JgKLIryiQicqv3/QaRqOYSNl4Z+XqOMw3WclCjVQmOI=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "edc261feaab5d40a48044bb5f40908d50fe2483a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -211,11 +242,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781446676,
-        "narHash": "sha256-p8IWxHo4JJyjmjgkT2zyO4NbDmHMRmO7aLWS83AW3nA=",
+        "lastModified": 1781516848,
+        "narHash": "sha256-lhdd5zp49vO+ZM9kJuCGzG1wg9jqPB9ces8cfFXOavc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "589f8821de5377ac9550deffce9278db86b678da",
+        "rev": "a94c81a55db27c7542d6ac19342d90bb3c89a626",
         "type": "github"
       },
       "original": {
@@ -231,6 +262,7 @@
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
+        "noctalia": "noctalia",
         "nur": "nur"
       }
     },
