@@ -46,6 +46,8 @@
     "./.bin/update".source = config/scripts/update;
     "./.bin/clean".source = config/scripts/clean;
 
+    xdg.configFile."niri/config.kdl".source = config/niri/config.kdl;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose

@@ -99,6 +99,10 @@
   # kde
   services.desktopManager.plasma6.enable = true;
 
+  # niri
+  programs.niri.enable = true;
+  programs.niri.useNautilus = true;
+
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
@@ -272,6 +276,7 @@
       ffmpeg
       firefox
       gamescope
+      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     ]
     ++ (with gnomeExtensions; [
       appindicator
