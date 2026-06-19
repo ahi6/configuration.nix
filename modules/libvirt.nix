@@ -5,5 +5,9 @@
 }: {
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-  users.extraGroups.vboxusers.members = ["ahi"];
+  virtualisation.libvirtd.qemu = {
+  swtpm.enable = true;
+};
+  virtualisation.spiceUSBRedirection.enable = true;
+  users.extraGroups.libvirtd.members = ["ahi"];
 }

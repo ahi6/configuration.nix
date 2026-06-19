@@ -17,7 +17,8 @@
     ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
-    ../../modules/virtualbox.nix
+    # ../../modules/virtualbox.nix
+    ../../modules/libvirt.nix
   ];
 
   nixpkgs.overlays = [
