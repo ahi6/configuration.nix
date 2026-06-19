@@ -94,14 +94,17 @@
   # Enable the GNOME Desktop Environment. (wayland-only)
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
 
   # kde
-  services.desktopManager.plasma6.enable = true;
+  # programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+  # services.desktopManager.plasma6.enable = true;
 
   # niri
   programs.niri.enable = true;
   programs.niri.useNautilus = true;
+
+  security.polkit.enable = true; # polkit
+  services.gnome.gnome-keyring.enable = true; # secret service
 
   xdg.portal = {
     enable = true;
@@ -264,7 +267,6 @@
     [
       vim
       wget
-      git
       gnupg
       pinentry-gnome3
       gnome-tweaks
@@ -277,6 +279,7 @@
       firefox
       gamescope
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+      xwayland-satellite
     ]
     ++ (with gnomeExtensions; [
       appindicator
@@ -312,6 +315,11 @@
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
+  };
+
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
