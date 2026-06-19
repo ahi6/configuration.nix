@@ -46,14 +46,14 @@
     "./.bin/update".source = config/scripts/update;
     "./.bin/clean".source = config/scripts/clean;
 
-    xdg.configFile."niri/config.kdl".source = config/niri/config.kdl;
-
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
+
+  xdg.configFile."niri/config.kdl".source = config/niri/config.kdl;
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
