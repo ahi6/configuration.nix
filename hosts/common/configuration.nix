@@ -30,6 +30,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.blacklistedKernelModules = ["hid_lenovo_go_s"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   nix.settings = {
@@ -112,11 +113,10 @@
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gnome
-      pkgs.kdePackages.xdg-desktop-portal-kde
     ];
     config = {
       common = {
-        default = ["kde"];
+        default = ["gtk"];
       };
     };
   };
@@ -281,6 +281,7 @@
       gamescope
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       xwayland-satellite
+      adwaita-icon-theme
     ]
     ++ (with gnomeExtensions; [
       appindicator
@@ -311,6 +312,15 @@
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     # dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    gamescopeSession.enable = true;
+
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false; # https://discourse.nixos.org/t/gamescope-refuses-to-work-with-steam/71417
   };
 
   programs.nautilus-open-any-terminal = {

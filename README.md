@@ -1,10 +1,6 @@
 # This is my personal NixOS configuration repository
-I aim to keep my configuration simple and minimal. I use a mostly vanilla GNOME Desktop without anything particularly exciting. 
-These are intended to be used only for my main computer and aren't designed suit other people's needs out of the box, but feel free to copy and paste snippets to your own config or use it as a base.  
 
-If you are considering NixOS yourself, keep in mind that managing nix configs is largely a Sisyphean task which is not worth the effort for most users. That being said, *one must imagine Sysiphus happy...*
-
-![NixOS Screenshot](https://github.com/user-attachments/assets/464d4c74-c531-4221-a424-084b35c82430)
+Currently running on my Legion Go S connected to a dock.
 
 ## Host
 - `ahinix`: Old laptop

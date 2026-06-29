@@ -13,12 +13,18 @@
     ../common/configuration.nix
   ];
 
-  networking.hostName = "tvo"; # Define your hostname.
+  networking.hostName = "tvo";
 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
+
+  hardware.uinput.enable = true;
+
+  users.users.ahi.extraGroups = ["input" "uinput" "video"];
+
+  boot.blacklistedKernelModules = ["hid_lenovo_go_s"]; # needed for hhd 4.1.9 on Linux 7.1+
 
   services.handheld-daemon.enable = true;
   services.handheld-daemon.user = "ahi";
