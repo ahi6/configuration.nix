@@ -11,7 +11,6 @@
   imports = [
     inputs.home-manager.nixosModules.default
     # ../../modules/warp.nix
-    ../../modules/no-middle-click-paste.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
     ../../modules/zed.nix
