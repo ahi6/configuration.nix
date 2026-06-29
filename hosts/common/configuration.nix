@@ -228,6 +228,7 @@
       ffmpeg
       ddcutil
       ddcui
+      heroic
     ];
   };
 
@@ -281,6 +282,7 @@
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       xwayland-satellite
       adwaita-icon-theme
+      alejandra
     ]
     ++ (with gnomeExtensions; [
       appindicator
