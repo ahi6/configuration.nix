@@ -54,6 +54,8 @@
   };
 
   xdg.configFile."niri/config.kdl".source = config/niri/config.kdl;
+  xdg.configFile."niri/outputs-handheld.kdl".source = config/niri/outputs-handheld.kdl;
+  xdg.configFile."niri/outputs-docked.kdl".source = config/niri/outputs-docked.kdl;
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home

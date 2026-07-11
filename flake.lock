@@ -6,16 +6,32 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1753729770,
-        "narHash": "sha256-n1toqcJV5EnPpz36/8uK6zAXVO3QQkjZ2hmkXTktQqM=",
-        "owner": "ahi6",
+        "lastModified": 1784581413,
+        "narHash": "sha256-/RZ01OhVjfbgqWpij4fVnwybyuwuIVqopSMUtLiITcE=",
+        "owner": "MrGlockenspiel",
         "repo": "activate-linux",
-        "rev": "6c24ca0b677bdb43505ed803cfb68908455d0595",
+        "rev": "203ee66e8e2a614266d59921d5493ea681b11a74",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MrGlockenspiel",
+        "repo": "activate-linux",
+        "type": "github"
+      }
+    },
+    "ahi-nixpkgs": {
+      "locked": {
+        "lastModified": 1785853122,
+        "narHash": "sha256-SREWbDiMcZLCJHlvETtNXxyAnyfCGn8WoVPXcYrgWFQ=",
+        "owner": "ahi6",
+        "repo": "nixpkgs",
+        "rev": "2ae27101dfbd1dea1449315537c8b9b79f2758b1",
         "type": "github"
       },
       "original": {
         "owner": "ahi6",
-        "repo": "activate-linux",
+        "ref": "update-handheld-daemon",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -65,11 +81,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782702263,
-        "narHash": "sha256-8/MG4Su7PhnynrmsVO61IeAfrK7GuUEu+E+gwbhy1QQ=",
+        "lastModified": 1785936982,
+        "narHash": "sha256-nuRhZbDKkfh8S+/M5TvQLVYiRXnJlvGhhybFFZW4jx4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "789a35fbdeb3c46b260096daa0b321c11be527ea",
+        "rev": "a9bcd0057073751a54ce5fd4b0dc63a391b6f349",
         "type": "github"
       },
       "original": {
@@ -80,11 +96,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753432016,
-        "narHash": "sha256-cnL5WWn/xkZoyH/03NNUS7QgW5vI7D1i74g48qplCvg=",
+        "lastModified": 1777270315,
+        "narHash": "sha256-yKB4G6cKsQsWN7M6rZGk6gkJPDNPIzT05y4qzRyCDlI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6027c30c8e9810896b92429f0092f624f7b1aace",
+        "rev": "6368eda62c9775c38ef7f714b2555a741c20c72d",
         "type": "github"
       },
       "original": {
@@ -96,48 +112,17 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1782467914,
-        "narHash": "sha256-pGvFkM8N0xEkIIXDe5YYfbEAvHrk4IxBrjB/x8OomhE=",
+        "lastModified": 1785828668,
+        "narHash": "sha256-8fsyqeO+mJqvIzeO4xIpgJe/f7MTbbVTEC6RT6WSXNs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e73de5be04e0eff4190a1432b946d469c794e7b4",
+        "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1782467914,
-        "narHash": "sha256-inDx/w70OSJoJPqtKh0BrzAsbZZhpya7YgS43jHnhwg=",
-        "rev": "e73de5be04e0eff4190a1432b946d469c794e7b4",
-        "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1022855.e73de5be04e0/nixexprs.tar.xz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
-      }
-    },
-    "noctalia": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3"
-      },
-      "locked": {
-        "lastModified": 1782733220,
-        "narHash": "sha256-quKX3iuAvr0RgJCzNgfzGahxq+YoDQ7ZhOHMW8qBPDU=",
-        "owner": "noctalia-dev",
-        "repo": "noctalia",
-        "rev": "62b89faed1e6ccb70953a6002fda300df0ccd388",
-        "type": "github"
-      },
-      "original": {
-        "owner": "noctalia-dev",
-        "repo": "noctalia",
         "type": "github"
       }
     },
@@ -149,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782733311,
-        "narHash": "sha256-YAbzfmY4Ug/bfs93+ZM6405YclFZ+KPX1CQfxEAR5TU=",
+        "lastModified": 1785935710,
+        "narHash": "sha256-zflm0uf3MAMMG7EoRynq9QNajxL4Qd5IvZ5p94WEELQ=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ed4372ac77f838988f6efb0d41e03bd520aa1afc",
+        "rev": "9a7dc1d6d29ac0ae7108cb8961af969c238e4714",
         "type": "github"
       },
       "original": {
@@ -165,9 +150,9 @@
     "root": {
       "inputs": {
         "activate-linux": "activate-linux",
+        "ahi-nixpkgs": "ahi-nixpkgs",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
-        "noctalia": "noctalia",
         "nur": "nur"
       }
     },

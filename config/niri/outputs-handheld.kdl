@@ -1,0 +1,19 @@
+output "eDP-1" {
+    // on
+
+    // mode "1920x1200@120.030"
+
+    scale 2
+
+    // transform "normal"
+
+    // position x=1280 y=0
+}
+
+output "Dell Inc. DELL P2217 K27YY84K201B" {
+   off 
+}
+
+output "Dell Inc. DELL U2415 7MT0178N07HS" {
+   off
+}

@@ -13,7 +13,7 @@
     # ../../modules/warp.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
-    ../../modules/zed.nix
+    # ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
     # ../../modules/virtualbox.nix
@@ -25,7 +25,7 @@
     (import ../../overlays/pkgs/gnome-backgrounds/default.nix) # custom wallpapers
   ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -37,14 +37,10 @@
     auto-optimise-store = true;
     substituters = [
       "https://cache.nixos.org/"
-      "https://cache.garnix.io"
       "https://nix-community.cachix.org"
-      "https://noctalia.cachix.org"
     ];
     trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
     ];
   };
 
@@ -103,6 +99,15 @@
   # niri
   programs.niri.enable = true;
   programs.niri.useNautilus = true;
+
+  # phosh --- launches instead of gdm TODO: make my own package?
+  #services.xserver.desktopManager.phosh = {
+  #  enable = true;
+  #  user = "ahi";
+  #  group = "users";
+  #  # for better compatibility with x11 applications
+  #  phocConfig.xwayland = "immediate";
+  #};
 
   security.polkit.enable = true; # polkit
   services.gnome.gnome-keyring.enable = true; # secret service
@@ -193,6 +198,15 @@
 
   # Tablet driver
   hardware.opentabletdriver.enable = true;
+  hardware.uinput.enable = true;
+
+  # virtual camera
+  boot.extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
+
+  boot.kernelModules = [
+    "uinput" # tablet driver
+    "v4l2loopback" # virtual camera
+  ];
 
   # i2c (for ddcutil)
   hardware.i2c.enable = true;
@@ -279,7 +293,7 @@
       ffmpeg
       firefox
       gamescope
-      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+      noctalia
       xwayland-satellite
       adwaita-icon-theme
       alejandra
@@ -297,6 +311,7 @@
       foresight
       caffeine
       light-style
+      paperwm
     ]);
 
   # security.sudo-rs.enable = true;
@@ -351,7 +366,7 @@
     ipv6 = true;
   };
 
-  # Disable fwupd, don't need it
+  # Disable fwupd
   services.fwupd.enable = false;
 
   services.syncthing = {
