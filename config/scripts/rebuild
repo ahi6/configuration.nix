@@ -19,8 +19,8 @@ alejandra .
 echo "NixOS Rebuilding..."
 
 # Rebuild
-sudo nixos-rebuild switch --flake /etc/nixos#`hostname`
-
+# sudo nixos-rebuild switch --flake /etc/nixos#`hostname`
+nh os switch
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep current)

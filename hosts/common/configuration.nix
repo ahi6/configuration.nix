@@ -200,7 +200,7 @@
   # Tablet driver
   hardware.opentabletdriver.enable = true;
   hardware.uinput.enable = true;
-  boot.kernelModules = [ "uinput" ];
+  boot.kernelModules = ["uinput"];
 
   # i2c (for ddcutil)
   hardware.i2c.enable = true;
