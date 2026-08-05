@@ -18,6 +18,7 @@
     ../../modules/muni.nix
     # ../../modules/virtualbox.nix
     ../../modules/libvirt.nix
+    ../../modules/v4l2.nix
   ];
 
   nixpkgs.overlays = [
@@ -199,14 +200,7 @@
   # Tablet driver
   hardware.opentabletdriver.enable = true;
   hardware.uinput.enable = true;
-
-  # virtual camera
-  boot.extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
-
-  boot.kernelModules = [
-    "uinput" # tablet driver
-    "v4l2loopback" # virtual camera
-  ];
+  boot.kernelModules = [ "uinput" ];
 
   # i2c (for ddcutil)
   hardware.i2c.enable = true;
@@ -297,6 +291,7 @@
       xwayland-satellite
       adwaita-icon-theme
       alejandra
+      nh
     ]
     ++ (with gnomeExtensions; [
       appindicator
