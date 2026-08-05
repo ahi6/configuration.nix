@@ -54,7 +54,7 @@
           nixpkgs.overlays = [
             nur.overlays.default
             (final: prev: {
-              handheld-daemon = inputs.ahi-nixpkgs.legacyPackages.${prev.system}.handheld-daemon;
+              handheld-daemon = inputs.ahi-nixpkgs.legacyPackages.${prev.stdenv.hostPlatform.system}.handheld-daemon;
             })
           ];
         }
