@@ -19,22 +19,6 @@
         "type": "github"
       }
     },
-    "ahi-nixpkgs": {
-      "locked": {
-        "lastModified": 1785853122,
-        "narHash": "sha256-SREWbDiMcZLCJHlvETtNXxyAnyfCGn8WoVPXcYrgWFQ=",
-        "owner": "ahi6",
-        "repo": "nixpkgs",
-        "rev": "2ae27101dfbd1dea1449315537c8b9b79f2758b1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ahi6",
-        "ref": "update-handheld-daemon",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -81,11 +65,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785936982,
-        "narHash": "sha256-nuRhZbDKkfh8S+/M5TvQLVYiRXnJlvGhhybFFZW4jx4=",
+        "lastModified": 1787176219,
+        "narHash": "sha256-djoRr6jBpe35q/0JwAvXpFXg1Ktf+X54NU2RLR7wnHw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a9bcd0057073751a54ce5fd4b0dc63a391b6f349",
+        "rev": "c53d643b3737e2fcd04e6cb3b3580ef50b2087a0",
         "type": "github"
       },
       "original": {
@@ -112,11 +96,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1785828668,
-        "narHash": "sha256-8fsyqeO+mJqvIzeO4xIpgJe/f7MTbbVTEC6RT6WSXNs=",
+        "lastModified": 1787135253,
+        "narHash": "sha256-RD2kNWCG+Bjo6h+JVjWVNntZs2GtRoeY2xHjts/FNkA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e72e4f299401a3689d4b3d5fc6496b11db7064eb",
+        "rev": "ffb3c9b700e759be2ef13237c9d8f953b32a1e46",
         "type": "github"
       },
       "original": {
@@ -134,11 +118,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785935710,
-        "narHash": "sha256-zflm0uf3MAMMG7EoRynq9QNajxL4Qd5IvZ5p94WEELQ=",
+        "lastModified": 1787323012,
+        "narHash": "sha256-rdlH54zecMCxDm7V2oZ81PPuJyRcO6zOlTgSytIHWus=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9a7dc1d6d29ac0ae7108cb8961af969c238e4714",
+        "rev": "3a417aa35624d559615e36bd4bf2c36456ca5c2e",
         "type": "github"
       },
       "original": {
@@ -150,7 +134,6 @@
     "root": {
       "inputs": {
         "activate-linux": "activate-linux",
-        "ahi-nixpkgs": "ahi-nixpkgs",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur"

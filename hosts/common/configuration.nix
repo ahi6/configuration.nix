@@ -216,12 +216,9 @@
       onlyoffice-desktopeditors
       yt-dlp
       pear-desktop # youtube music
-      shortwave # gtk+ internet radio
       celluloid # gtk+ mpv frontend
       mission-center # resource usage monitor
       hieroglyphic # LaTeX symbol finder
-      foliate # e-book reader
-      gelly
       file-roller
       rnote
       nix-your-shell # nix-shell fish support
@@ -237,6 +234,8 @@
       ddcutil
       ddcui
       heroic
+      playerctl # for noctalia lyrics
+      python3 # for noctalia lyrics
     ];
   };
 
@@ -248,6 +247,7 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
+    cantarell-fonts
   ];
   fonts.fontconfig = {
     defaultFonts = {
@@ -309,7 +309,11 @@
       paperwm
     ]);
 
-  # security.sudo-rs.enable = true;
+  security.sudo-rs.enable = true;
+  security.sudo-rs.extraConfig = ''
+    Defaults pwfeedback
+    Defaults lecture = never
+  '';
 
   # programs.nix-ld.enable = true;
   # programs.nix-ld.libraries = with pkgs; [

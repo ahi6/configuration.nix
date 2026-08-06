@@ -4,9 +4,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    ahi-nixpkgs = {
-      url = "github:ahi6/nixpkgs?ref=update-handheld-daemon";
-    };
+    #    ahi-nixpkgs = {
+    #      url = "github:ahi6/nixpkgs?ref=update-handheld-daemon";
+    #    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -50,14 +50,14 @@
         activate-linux-pkg = activate-linux.packages.${system}.default;
       };
       modules = [
-        {
-          nixpkgs.overlays = [
-            nur.overlays.default
-            (final: prev: {
-              handheld-daemon = inputs.ahi-nixpkgs.legacyPackages.${prev.stdenv.hostPlatform.system}.handheld-daemon;
-            })
-          ];
-        }
+        #       {
+        #         nixpkgs.overlays = [
+        #           nur.overlays.default
+        #           (final: prev: {
+        #             handheld-daemon = inputs.ahi-nixpkgs.legacyPackages.${prev.stdenv.hostPlatform.system}.handheld-daemon;
+        #           })
+        #         ];
+        #       }
         ./hosts/tvo/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
