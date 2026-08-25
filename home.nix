@@ -23,7 +23,7 @@
     #    awatcher
 
     kitty
-    meowpdf
+    # meowpdf
     mommy
   ];
 
@@ -45,6 +45,8 @@
     "./.bin/rebuild".source = config/scripts/rebuild;
     "./.bin/update".source = config/scripts/update;
     "./.bin/clean".source = config/scripts/clean;
+    "./.bin/handheld-on".source = config/scripts/handheld-on;
+    "./.bin/handheld-off".source = config/scripts/handheld-off;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -94,47 +96,5 @@
       withRuby = true;
       withPython3 = true;
     };
-
-    #    vscode = {
-    #      enable = true;
-    #      package = pkgs.vscodium.fhsWithPackages (ps:
-    #        with ps; [
-    #          # rustup
-    #          zlib
-    #        ]);
-    #    };
-  };
-
-  services = {
-    #    activitywatch = {
-    #      enable = true;
-    #watchers = {
-    #  awatcher = {
-    #    package = pkgs.awatcher; # systemd's bad at managing awatcher
-    #    executable = "awatcher";
-    #  };
-    #};
-    #    };
-  };
-
-  #  xdg.autostart.enable = true;
-  #  xdg.autostart.entries = [
-  #    (
-  #      (pkgs.makeDesktopItem rec {
-  #        destination = "/";
-  #        name = "awatcher";
-  #        desktopName = name;
-  #        exec = "${name}";
-  #        terminal = false;
-  #        startupNotify = false;
-  #        extraConfig = {
-  #          "X-GNOME-Autostart-enabled" = "true";
-  #          "X-KDE-autostart-after" = "panel";
-  #        };
-  #      })
-  #      + /awatcher.desktop
-  #    )
-  #  ];
-
-  # programs.powerline-go.enable = true;
+ };
 }

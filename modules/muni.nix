@@ -28,6 +28,14 @@
       mypy
       python313Packages.flake8
     ];
+    pb006 = [
+      mono
+      dotnet-sdk_10
+      csharp-ls
+    ];
+    pb070 = [
+      digital
+    ];
   };
 in {
   # NTP
@@ -35,4 +43,6 @@ in {
 
   # environment.systemPackages = munipkgs.pb015 ++ munipkgs.ib111; # fall 2025
   # environment.systemPackages = munipkgs.ib002; # spring 2026
+
+  environment.systemPackages = munipkgs.pb006 ++ munipkgs.pb070; # fall 2026
 }

@@ -82,7 +82,7 @@ include optional=true "outputs.kdl"
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -360,8 +360,8 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+X       { spawn-sh "ln -fs ~/.config/niri/outputs-handheld.kdl ~/.config/niri/outputs.kdl"; }
-    Mod+Shift+X { spawn-sh "ln -fs ~/.config/niri/outputs-docked.kdl ~/.config/niri/outputs.kdl"; }
+    Mod+X       { spawn-sh "ln -fs ~/.config/niri/outputs-handheld.kdl ~/.config/niri/outputs.kdl; ~/.bin/handheld-on"; }
+    Mod+Shift+X { spawn-sh "ln -fs ~/.config/niri/outputs-docked.kdl ~/.config/niri/outputs.kdl; ~/.bin/handheld-off"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }

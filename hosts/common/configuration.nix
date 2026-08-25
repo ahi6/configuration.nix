@@ -13,11 +13,11 @@
     # ../../modules/warp.nix
     ../../modules/plymouth.nix
     ../../modules/kde-connect.nix
-    # ../../modules/zed.nix
+    ../../modules/zed.nix
     # ../../modules/activate-linux.nix
     ../../modules/muni.nix
     # ../../modules/virtualbox.nix
-    ../../modules/libvirt.nix
+    # ../../modules/libvirt.nix
     ../../modules/v4l2.nix
   ];
 
@@ -26,9 +26,12 @@
     (import ../../overlays/pkgs/gnome-backgrounds/default.nix) # custom wallpapers
   ];
 
+  documentation.nixos.enable = false;
+
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.systemd.enable = true;
 
   boot.blacklistedKernelModules = ["hid_lenovo_go_s"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -195,7 +198,7 @@
   };
 
   # Enable xpadneo driver for Bluetooth Xbox One controller support
-  hardware.xpadneo.enable = true;
+  # hardware.xpadneo.enable = true;
 
   # Tablet driver
   hardware.opentabletdriver.enable = true;
@@ -236,6 +239,8 @@
       heroic
       playerctl # for noctalia lyrics
       python3 # for noctalia lyrics
+      wvkbd # osk
+      lisgd # touchscreen gestures
     ];
   };
 
@@ -306,7 +311,6 @@
       foresight
       caffeine
       light-style
-      paperwm
     ]);
 
   security.sudo-rs.enable = true;
@@ -327,7 +331,7 @@
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     # dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    gamescopeSession.enable = true;
+    # gamescopeSession.enable = true;
 
     extraCompatPackages = with pkgs; [
       proton-ge-bin

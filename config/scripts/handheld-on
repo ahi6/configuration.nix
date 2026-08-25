@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if ! pgrep -x "wvkbd-mobintl" >/dev/null; then
+    wvkbd-mobintl -L 150 --hidden &
+fi
+
+pkill -x lisgd || true
+
+lisgd -d "/dev/input/by-path/platform-AMDI0010:02-event" \
+  -g "2,DU,B,*,R,noctalia msg panel-toggle launcher" \
+  -g "1,DU,B,*,R,pkill -RTMIN wvkbd-mobintl" \
+  -g "1,UD,*,*,R,pkill -USR1 wvkbd-mobintl" \
+  -g "2,RL,*,*,R,niri msg action focus-column-right" \
+  -g "2,LR,*,*,R,niri msg action focus-column-left" \
+  -g "3,RL,*,*,R,niri msg action focus-workspace-down" \
+  -g "3,LR,*,*,R,niri msg action focus-workspace-up" &

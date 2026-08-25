@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+pkill -x lisgd || true
+pkill -x wvkbd-mobintl || true
